@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traveling with Moods</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #777;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Traveling with Moods</h1>
+    <h2>Name your destination:</h2>
+    <input type="text" id="destination" placeholder="Enter your destination">
+    <h2>Choose your mood:</h2>
+    <div class="card" onclick="redirectToDestination('https://example.com/mountains')">
+        <img src="image1.jpg" alt="Mountains">
+        <h3>Adventurous</h3>
+        <p>Destinations for Adventurous: Nepal, New Zealand, Peru</p>
+        <p>Additional Information: Nepal is home to the majestic Himalayas and offers trekking opportunities. New Zealand is known for its stunning landscapes, adventure sports, and hiking trails. Peru is famous for its ancient ruins, including Machu Picchu, and offers opportunities for hiking and exploring the Amazon rainforest.</p>
+      </div>
+  </div>
+
+  <script>
+    function redirectToDestination(url) {
+      var destination = document.getElementById('destination').value;
+      window.location.href = url + '?destination=' + encodeURIComponent(destination);
+    }
+  </script>
+</body>
+</html>

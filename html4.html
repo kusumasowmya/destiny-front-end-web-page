@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traveling with Moods</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #777;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Traveling with Moods</h1>
+    <h2>Name your destination:</h2>
+    <input type="text" id="destination" placeholder="Enter your destination">
+    <h2>Choose your mood:</h2>
+    <div class="card" onclick="redirectToDestination('https://example.com/forest')">
+        <img src="image2.jpg" alt="Forest">
+        <h3>Peaceful</h3>
+        <p>Destinations for Peaceful: Switzerland, Canada, Costa Rica</p>
+        <p>Additional Information: Switzerland is famous for its picturesque landscapes, charming villages, and skiing opportunities. Canada offers vast wilderness, stunning national parks, and serene lakes. Costa Rica is known for its lush rainforests, diverse wildlife, and eco-tourism activities.</p>
+      </div>
+
+  <script>
+    function redirectToDestination(url) {
+      var destination = document.getElementById('destination').value;
+      window.location.href = url + '?destination=' + encodeURIComponent(destination);
+    }
+  </script>
+</body>
+</html>
